@@ -124,7 +124,7 @@ Actualmente el proyecto se encuentra en una fase **Work In Progress (WIP)**, don
 # 📂 Estructura del proyecto
 
 ```bash
-nyetflix/
+PlataformadeStreaming/
 │
 ├── frontend/
 │   ├── pages/
@@ -149,7 +149,7 @@ nyetflix/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/your-user/nyetflix.git
+git clone https://github.com/isairey/PlataformadeStreaming.git
 ```
 
 ---
@@ -289,7 +289,7 @@ Si encuentras errores o problemas:
 
 <div align="center">
 
-## Nyetflix Development Team
+## Isai Reyes Developer
 
 Proyecto educativo enfocado en el aprendizaje de plataformas modernas de streaming multimedia.
 
