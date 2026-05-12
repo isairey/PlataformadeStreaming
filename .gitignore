@@ -1,0 +1,17 @@
+/vendor/
+
+/backend/keys/**
+!/backend/keys/README.md
+
+/backend/data/**
+!/backend/data/logs/
+!/backend/data/logs/README.md
+
+!/backend/data/movies/
+!/backend/data/movies/README.md
+
+/media/**
+!/media/pictures/
+!/media/pictures/README.md
+!/media/thumbnails/
+!/media/thumbnails/README.md

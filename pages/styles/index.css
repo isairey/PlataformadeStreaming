@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --background-color: rgb(20, 20, 20);
+  --text-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  display: flex;
+  padding: 0.75vw 1.5vw;
+  border-radius: 5px;
+  font-size: 1.2vw;
+  font-weight: bold;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8vw;
+  display: inline-block;
+}
+
+/* Clear the hover underline for navigation items */
+.nav-items a:hover,
+a.nav-items:hover {
+  text-decoration: none;
+}
+
+/* Footer links should still get underline on hover */
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.6vw;
+  margin: 1vw 0;
+}
+
+.genre {
+    padding: 60px 0px 0px 60px;
+    display: flex;
+    align-items: center;
+}
+
+.genre-type {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background-color: var(--background-color);
+    color: white;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.genre-type:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.genre-type option {
+    background-color: #000;
+    color: white;
+    padding: 100px;
+}
+.genre + main {
+    margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2vw;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 3vw;
+  }
+
+  .description {
+    font-size: 1.5vw;
+  }
+
+  button {
+    font-size: 2vw;
+    gap: 5px;
+  }
+}

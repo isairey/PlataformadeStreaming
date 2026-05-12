@@ -1,0 +1,132 @@
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 4vw;
+  font-size: 1.2vw;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: #141414;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Add gradient overlay for better text visibility when transparent */
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+nav.scrolled::before {
+  opacity: 0;
+}
+
+.nav-dark {
+  background-color: black;
+}
+
+.brand {
+  width: 100px;
+  height: auto;
+  position: relative;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav.scrolled .brand {
+  background-color: transparent;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  margin-left: 2vw;
+  font-size: medium;
+  font-weight: 500;
+  position: relative;
+  z-index: 11;
+}
+
+.nav-items a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 12;
+  display: block;
+  padding: 5px 10px;
+}
+
+.nav-items a:hover {
+  color: #e5e5e5;
+}
+
+a.nav-items {
+  position: relative;
+  z-index: 12;
+  color: white;
+  text-decoration: none;
+}
+
+a.nav-items:hover {
+  color: #e5e5e5;
+}
+
+.nav-item {
+  cursor: pointer;
+  position: relative;
+  z-index: 11;
+  white-space: nowrap;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.small {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav-items {
+    display: none !important;
+  }
+
+  .small {
+    display: block;
+    font-size: 2vw;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 10;
+}

@@ -1,0 +1,122 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-list {
+    text-align: center;
+}
+
+.profile-gate-label {
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: unset;
+    margin-bottom: 2em;
+}
+
+.profile-list-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2em 0;
+}
+
+.user-profile {
+    width: 10vw;
+    max-width: 200px;
+    min-width: 84px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.user-profile:hover {
+    transform: scale(1.05);
+}
+
+.user-profile:hover .profile-name {
+    color: #fff;
+}
+
+.avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-avatar {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.profile-avatar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.profile-name {
+    color: grey;
+    font-size: 1.3vw;
+    margin: 0.6em 0 0;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.manage-button {
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    margin: 2em auto;
+    padding: 0.5em 1.5em;
+}
+
+.manage-button:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+@media screen and (min-width: 1666px) {
+    .profile-name {
+        font-size: 24px;
+    }
+    .manage-button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profile-name {
+        font-size: 12px;
+    }
+    .manage-button {
+        font-size: 14px;
+    }
+}

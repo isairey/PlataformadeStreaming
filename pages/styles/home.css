@@ -1,0 +1,179 @@
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #333;
+    border-top: 3px solid #e50914;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.error-message {
+    background-color: #e50914;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+.video-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10000;
+    display: none;
+}
+.video-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.video-player:hover .video-controls {
+    opacity: 1;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+/* Create a hover area that includes both icon and menu */
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Add padding to create a hover bridge between icon and menu */
+.profile-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px; /* This creates a hover bridge */
+    background: transparent;
+}
+
+.profiles-list {
+    padding: 10px;
+}
+
+.profile-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+}
+
+.profile-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-option.current {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
+
+.profile-option img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.profile-option span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+
+.menu-actions {
+    padding: 10px;
+}
+
+.menu-actions a {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+}
+
+.menu-actions a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-actions i {
+    margin-right: 12px;
+    font-size: 16px;
+}

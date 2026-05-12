@@ -1,0 +1,8 @@
+{
+    "name": "paulusel/nyetflix",
+    "description": "movie streaming site",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^6.11"
+    }
+}
